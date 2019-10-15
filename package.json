@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "xo && nyc node --expose-gc ./node_modules/ava/profile.js index.test.js"
+    "test": "xo && (ava > /dev/null || nyc node --expose-gc ./node_modules/ava/profile.js index.test.js)"
   },
   "homepage": "https://github.com/futpib/deep-weak-map",
   "ava": {

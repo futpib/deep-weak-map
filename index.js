@@ -20,8 +20,8 @@ class DeepWeakMap {
 
 	has(keys) {
 		return keys.reduce(({ map, has }, key) => ({
-			map: map.get(key),
-			has: has && map.has(key),
+			map: map && map.get(key),
+			has: has && map && map.has(key),
 		}), {
 			map: this._map,
 			has: true,

@@ -98,6 +98,16 @@ test.serial('DeepWeakMap', t => {
 
 	const map = new DeepWeakMap();
 
+	t.false(map.has([ a, b, c ]));
+	t.false(map.has([ a, b, d ]));
+
+	t.is(map.get([ a, b, c ]), undefined);
+	t.is(map.get([ a, b, d ]), undefined);
+
+	t.notThrows(() => {
+		map.delete([ a, b, c ]);
+	});
+
 	map.set([ a, b, c ], value);
 
 	t.true(map.has([ a, b, c ]));

@@ -29,7 +29,7 @@ map.get([ a, b, c ]); // → value
 map.get([ a, b, d ]); // → undefined
 
 map.delete([ a, b, c ]);
-map.has([ a, b, c ]); // → undefined
+map.has([ a, b, c ]); // → false
 ```
 
 ## Install

@@ -1,9 +1,9 @@
 
-import v8 from 'v8';
+const v8 = require('v8');
 
-import test from 'ava';
+const test = require('ava');
 
-import DeepWeakMap from '.';
+const DeepWeakMap = require('.');
 
 const iterations = 2 ** 21;
 
@@ -86,7 +86,7 @@ test.serial('DeepWeakMap', doesNotRetainKeys, () => {
 	});
 });
 
-test.serial('DeepWeakMap', t => {
+test.serial('DeepWeakMap API', t => {
 	const [ a, b, c, d ] = [
 		randomObject(),
 		randomObject(),

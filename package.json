@@ -4,18 +4,18 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "xo && (ava > /dev/null || nyc node --expose-gc ./node_modules/ava/profile.js index.test.js)"
+    "test": "xo && nyc ava --node-arguments='--expose-gc' index.test.js"
   },
   "homepage": "https://github.com/futpib/deep-weak-map",
   "ava": {
     "verbose": true
   },
   "devDependencies": {
-    "ava": "^2.4.0",
-    "coveralls": "^3.0.6",
+    "ava": "^3.4.0",
+    "coveralls": "^3.0.9",
     "eslint-config-xo-overrides": "^1.4.0",
     "nyc": "^15.0.0",
-    "xo": "^0.26.0"
+    "xo": "^0.26.1"
   },
   "xo": {
     "extends": [

@@ -2,7 +2,7 @@
 
 > WeakMap with an array of keys
 
-[![Build Status](https://travis-ci.org/futpib/deep-weak-map.svg?branch=master)](https://travis-ci.org/futpib/deep-weak-map) [![Coverage Status](https://coveralls.io/repos/github/futpib/deep-weak-map/badge.svg?branch=master)](https://coveralls.io/github/futpib/deep-weak-map?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/futpib/deep-weak-map/badge.svg?branch=master)](https://coveralls.io/github/futpib/deep-weak-map?branch=master)
 
 ## Example
 

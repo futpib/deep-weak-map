@@ -5,6 +5,7 @@ import v8 from 'v8';
 import type { ExecutionContext, Macro } from 'ava';
 import test from 'ava';
 
+import mem from 'mem';
 import DeepWeakMap from '.';
 
 const iterations = 2 ** 21;
@@ -181,4 +182,27 @@ test.serial('DeepWeakMap types', t => {
 	}, {
 		name: 'TypeError',
 	});
+});
+
+test.serial('Integration with mem', t => {
+	type A = { a: number };
+	type B = { b: number };
+
+	type Value = { value: number };
+
+	let callCount = 0;
+	const f = mem((a: A, b: B): Value => ({
+		value: a.a + b.b + callCount++,
+	}), {
+		cacheKey: arguments_ => arguments_,
+		cache: new DeepWeakMap(),
+	});
+
+	const a0 = { a: 0 };
+	const b0 = { b: 0 };
+
+	t.is(f(a0, b0).value, 0);
+	t.is(f(a0, b0).value, 0);
+
+	t.is(callCount, 1);
 });

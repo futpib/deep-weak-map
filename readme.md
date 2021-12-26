@@ -2,11 +2,11 @@
 
 > WeakMap with an array of keys
 
-[![Coverage Status](https://coveralls.io/repos/github/futpib/deep-weak-map/badge.svg?branch=master)](https://coveralls.io/github/futpib/deep-weak-map?branch=master)
+[![npm](https://shields.io/npm/v/deep-weak-map)](https://www.npmjs.com/package/deep-weak-map) [![Coverage Status](https://coveralls.io/repos/github/futpib/deep-weak-map/badge.svg?branch=master)](https://coveralls.io/github/futpib/deep-weak-map?branch=master)
 
 ## Example
 
-```js
+```typescript
 import DeepWeakMap from 'deep-weak-map';
 
 const [ a, b, c, d ] = [

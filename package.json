@@ -31,6 +31,7 @@
     "ava": "^3.4.0",
     "coveralls": "^3.0.9",
     "eslint-config-xo-overrides": "^1.4.0",
+    "husky": "^7.0.4",
     "nyc": "^15.0.0",
     "xo": "^0.47.0"
   },
